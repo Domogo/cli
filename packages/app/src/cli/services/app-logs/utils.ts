@@ -233,7 +233,7 @@ export const subscribeToAppLogs = async (
   developerPlatformClient: DeveloperPlatformClient,
   variables: AppLogsSubscribeVariables,
 ): Promise<string> => {
-  const result = await developerPlatformClient.subscribeToAppLogs(variables)
+  const result = await developerPlatformClient.subscribeToAppLogs(variables, "2")
   const {jwtToken, success, errors} = result.appLogsSubscribe
   outputDebug(`Token: ${jwtToken}\n`)
   outputDebug(`API Key: ${variables.apiKey}\n`)

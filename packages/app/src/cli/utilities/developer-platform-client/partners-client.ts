@@ -551,7 +551,7 @@ export class PartnersClient implements DeveloperPlatformClient {
     return input.toUpperCase()
   }
 
-  async subscribeToAppLogs(input: AppLogsSubscribeVariables): Promise<AppLogsSubscribeResponse> {
+  async subscribeToAppLogs(input: AppLogsSubscribeVariables, _organizationId: string): Promise<AppLogsSubscribeResponse> {
     return this.request(AppLogsSubscribeMutation, input)
   }
 
